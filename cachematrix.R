@@ -1,15 +1,34 @@
-## Put comments here that give an overall description of what your
-## functions do
+# # Coloque comentarios aquí que brinden una descripción general de lo que
+# # funciones hacen
 
-## Write a short comment describing this function
+# # Escriba un breve comentario describiendo esta función
 
-makeCacheMatrix <- function(x = matrix()) {
-
+makeCacheMatrix  <-  función ( x  =  matriz ()) {
+        # var y funciones
+        matrizinversa  <-  NULL
+        set  <-  función ( y ) {
+                x  << -  y
+                matrizinversa  << -  NULL
+                }
+                obtener  <-  función () ( x )
+        setInversa  <-  función ( calculoinversa ) ( matrizinversa  << -  calculoinversa )
+        getInversa  <-  function () ( matrizinversa )
+        lista ( set  =  set , get  =  get , setInversa  =  setInversa , getInversa  =  getInversa )
+        
 }
 
 
-## Write a short comment describing this function
+# # Escriba un breve comentario describiendo esta función
 
-cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+cacheSolve  <-  función ( x , ... ) {
+        # # Devuelve una matriz que es la inversa de 'x'
+        solinversa  <-  x $ getInversa ()
+        if ( ! is.null ( solinversa )) {
+                 mensaje ( " obteniendo datos en caché " )
+                 volver ( solinversa )
+                 }
+        datos  <-  x $ get ()
+        solinversa  <- resolver ( datos , ... )
+        x $ setInversa ( solinversa )
+        solinversa
 }
